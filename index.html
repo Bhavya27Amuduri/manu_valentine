@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Manu 💜 My Valentine</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Music -->
+<audio id="bgMusic" loop>
+  <source src="i_wanna_be_yours.mp3" type="audio/mpeg">
+</audio>
+<button id="musicBtn" onclick="toggleMusic()">🔊</button>
+
+<!-- Hearts -->
+<div class="hearts"></div>
+<div id="heartExplosion"></div>
+
+<!-- PAGE 1 -->
+<section id="page1" class="page active">
+  <h1>Manu 💜 do you love me?</h1>
+  <button onclick="goToPage('page2')">Yes 💖</button>
+  <button id="noBtn">You can't touch that! 😒</button>
+</section>
+
+<!-- PAGE 2 -->
+<section id="page2" class="page">
+  <h1>Baby💌 let me test how much you love me</h1>
+
+  <div class="question">
+    <p>1. How much do you rate me as a gf?</p>
+    <input type="range" min="1" max="100" id="q1">
+  </div>
+
+  <div class="question">
+    <p>2. When did we start talking?</p>
+    <select id="q2">
+      <option value="">Select</option>
+      <option value="wrong">Feb 14th 2019 ❤️</option>
+      <option value="correct">April 8th 2018 💜</option>
+      <option value="wrong">June 1st 2020 💖</option>
+    </select>
+  </div>
+
+  <div class="question">
+    <p>3. What do I like doing most?</p>
+    <select id="q3">
+      <option value="">Select</option>
+      <option value="wrong">Shopping ✨</option>
+      <option value="correct">Kissing you 😘</option>
+      <option value="wrong">Sleeping😌 </option>
+    </select>
+  </div>
+
+  <div class="question">
+    <p>4. What is my favourite place?</p>
+    <select id="q4">
+      <option value="">Select</option>
+      <option value="wrong">Beach 🏖️</option>
+      <option value="wrong">Cafe 🤎</option>
+      <option value="correct">Home (You)💫</option>
+    </select>
+  </div>
+
+  <button onclick="checkQuiz()">Submit 💌</button>
+</section>
+
+<!-- PAGE 3 -->
+<section id="page3" class="page">
+  <h1 id="resultText"></h1>
+</section>
+
+<!-- PAGE 4 -->
+<section id="page4" class="page">
+  <h1>Bngrm will you be my forever Valentine 💍?</h1>
+  <button onclick="vibrate(); heartExplosion(); setTimeout(() => goToPage('page5'), 1200);">
+    Yes 😍
+  </button>
+  <button onclick="beg()">No 🙄</button>
+  <p id="begText"></p>
+  <img id="begGif" class=""beg-gif hidden" src="">
+</section>
+
+<!-- PAGE 5 -->
+<section id="page5" class="page">
+  <h1>💕 I knew you would say YES 💕 </h1>
+  <p id="countdown"></p>
+  <img src="download.gif" class="gif">
+  <p class="one-more" onclick="goToPage('page7')">One more thing… 💭</p>
+</section>
+
+
+
+
+<!-- PAGE 7 PHOTOS -->
+<section id="page7" class="page">
+  <h2>Our Sweet Moments 💕</h2>
+  <p class="photo-text">
+    “Every picture here holds a memory I never want to forget.”
+  </p>
+
+  <div class="slideshow">
+  <img class="slide active" src="photos/lov1.jpeg">
+  <img class="slide" src="photos/lov2.jpeg">
+  <img class="slide" src="photos/lov4.jpeg">
+  <img class="slide" src="photos/lov3.jpeg">
+  <img class="slide" src="photos/lov5.jpeg">
+
+  <button class="prev" onclick="changeSlide(-1)">❮</button>
+  <button class="next" onclick="changeSlide(1)">❯</button>
+</div>
+
+
+  <button onclick="goToPage('page8')">Next</button>
+</section>
+
+<!-- PAGE 8 FINAL -->
+<section id="page8" class="page">
+  <h1>Happy Valentines Day Bngrm 💜</h1>
+  <div class="love-box">
+    <p>
+      Nuvvu naa life lo vachinappati nunchi everything just feels different…
+      better, happier, brighter.Naa mood swings, drama, chiraku, nonsense 
+      anni tolerate chesthu still nannu love chestunnav ante honestly you 
+      deserve an award 😂.With you, even simple moments feel special — random 
+      calls, silly fights, teasing, late night talks, and those ‘I miss you ra’ texts… 
+      everything feels magical. With you, I feel safe… understood… complete.
+      Thank you for being there for me,for loving me,and for choosing me every day🥺💖
+      I love you so much ra....more than words,more than distance,more than anything.💜
+    </p>
+  </div>
+  <button onclick="goToPage('page1')">Replay from beginning 🔁</button>
+</section>
+
+
+<script src="script.js" defer></script>
+</body>
+</html>
