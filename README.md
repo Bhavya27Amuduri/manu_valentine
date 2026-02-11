@@ -1,2 +1,2 @@
 # manu_valentine
-Its a Hackathon project about certificate generation using Blockchain Technology
+Its a Website made with html,css and js
